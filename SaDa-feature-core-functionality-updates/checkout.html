@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaDa Store - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <a href="index.html" class="logo">SaDa Store</a>
+        <button class="mobile-menu-button" id="menu-toggle-button" aria-label="Open navigation menu">
+            <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Men</a></li>
+                <li><a href="products.html?category=women">Women</a></li>
+                <li><a href="products.html?category=kids">Kids</a></li>
+                <li><a href="products.html?category=accessories">Accessories</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li>
+                    <a href="cart.html" aria-label="View Shopping Cart">
+                        <svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.993.993 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        <span id="cart-item-count">(0)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Devaldino+Josoel+Benelli+140%2C+S%C3%A3o+Crist%C3%B3v%C3%A3o%2C+Conc%C3%B3rdia+-+Santa+Catarina%2C+Brazil" 
+                       target="_blank" 
+                       aria-label="View Store Location: Rua Devaldino Josoel Benelli 140, São Cristóvão, Concórdia - Santa Catarina, Brazil on Google Maps">
+                        <svg class="icon icon-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="search" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Checkout</h1>
+        <form class="checkout-form">
+            <div class="form-section" id="shipping-address">
+                <h2>Shipping Address</h2>
+                <div class="form-group">
+                    <label for="ship-fullname">Full Name</label>
+                    <input type="text" id="ship-fullname" name="ship-fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="ship-address1">Address Line 1</label>
+                    <input type="text" id="ship-address1" name="ship-address1" required>
+                </div>
+                <div class="form-group">
+                    <label for="ship-city">City</label>
+                    <input type="text" id="ship-city" name="ship-city" required>
+                </div>
+                <div class="form-group">
+                    <label for="ship-zip">ZIP Code</label>
+                    <input type="text" id="ship-zip" name="ship-zip" required>
+                </div>
+                <div class="form-group">
+                    <label for="ship-country">Country</label>
+                    <input type="text" id="ship-country" name="ship-country" required>
+                </div>
+            </div>
+
+            <div class="form-section" id="billing-address">
+                <h2>Billing Address</h2>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="same-as-shipping" name="same-as-shipping">
+                    <label for="same-as-shipping">Same as shipping address</label>
+                </div>
+                <div id="billing-address-fields">
+                    <div class="form-group">
+                        <label for="bill-fullname">Full Name</label>
+                        <input type="text" id="bill-fullname" name="bill-fullname">
+                    </div>
+                    <div class="form-group">
+                        <label for="bill-address1">Address Line 1</label>
+                        <input type="text" id="bill-address1" name="bill-address1">
+                    </div>
+                    <div class="form-group">
+                        <label for="bill-city">City</label>
+                        <input type="text" id="bill-city" name="bill-city">
+                    </div>
+                    <div class="form-group">
+                        <label for="bill-zip">ZIP Code</label>
+                        <input type="text" id="bill-zip" name="bill-zip">
+                    </div>
+                    <div class="form-group">
+                        <label for="bill-country">Country</label>
+                        <input type="text" id="bill-country" name="bill-country">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section" id="payment-information">
+                <h2>Payment Information</h2>
+                <div class="form-group">
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" name="card-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" required>
+                </div>
+                <!-- Add more payment fields like Expiry, CVV -->
+            </div>
+
+            <div class="form-section" id="order-summary">
+                <h2>Order Summary</h2>
+                <!-- Order summary details (e.g., items, subtotal, total) would be dynamically populated or shown here -->
+                <p>Total: <span id="checkout-total">$109.97</span> (Example)</p>
+            </div>
+
+            <button type="submit" class="place-order-btn">Place Order</button>
+        </form>
+    </main>
+    <footer class="container">
+        <p>&copy; 2023 SaDa Store. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+    <script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,811 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #FF7F50; /* Coral Vibrante */
+    --secondary-color: #008080; /* Azul Teal Profundo (para enlaces y acentos secundarios) */
+    --accent-color: #FFD700; /* Amarillo Dorado (para posibles otros acentos, o mantener coral para CTAs) */
+    --light-bg-color: #F8F8F8; /* Blanco Hueso para el fondo del body */
+    --dark-text-color: #333333; /* Casi Negro para texto principal */
+    --medium-grey-color: #6c757d; /* Gris Medio para bordes o texto sutil */
+    --white-color: #FFFFFF;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); /* Mantener o ajustar si es necesario */
+    /* Deprecar --black y --light-color originales si no se usan más, o reasignarlos */
+    --black: var(--dark-text-color); /* Reasignar variable existente */
+    --light-color: var(--primary-color); /* Reasignar variable existente */
+}
+/* Global Resets and Base Styles */
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* border: none; */ /* Too broad, remove or make specific */
+    outline: none;
+    /* text-transform: capitalize; */ /* Removed for natural casing */
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%; /* Makes 1rem = 10px for easier sizing */
+    overflow-x: hidden; /* Keep from original */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--light-bg-color);
+    color: var(--dark-text-color);
+    line-height: 1.6; /* Improved readability */
+    font-size: 1.6rem; /* Default font size for body text */
+    padding-top: 80px; /* Approximate height of fixed header to prevent content overlap */
+}
+
+/* General Link Styles */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500; /* Slightly less bold than default 700 for a cleaner look */
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+    color: var(--dark-text-color); /* Default heading color */
+}
+h1 { font-size: 3.2rem; } 
+h2 { font-size: 2.8rem; }
+h3 { font-size: 2.4rem; }
+
+/*navbar style star */
+/* Header Styles - Assuming header tag is used, and it might have .container class for width control */
+header { /* General fixed header properties */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color); /* New primary color for header background */
+    padding: 1.5rem 7%; /* Adjusted padding from prompt example */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    z-index: 10000;
+}
+
+header .logo { /* Style for logo text or container */
+    font-size: 2.5rem; 
+    font-weight: 700;
+    color: var(--white-color); /* White color for logo text */
+}
+
+header .logo img { /* If logo is an image */
+    height: auto; 
+    max-height: 50px; /* Example constraint */
+}
+
+/* Navigation Styles - Target new structure: nav > ul.nav-list > li > a */
+header nav .nav-list {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Align items in a row */
+    align-items: center;
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+}
+
+header nav .nav-list li {
+    margin-left: 2rem; /* Space between nav items */
+}
+
+header nav .nav-list a {
+    font-size: 1.7rem; 
+    padding: 0.8rem 1.5rem; /* Padding for clickable area */
+    color: var(--white-color); /* White text for nav links */
+    border: 0.1rem solid transparent;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+header nav .nav-list a:hover,
+header nav .nav-list a.active { 
+    color: var(--white-color);
+    background-color: var(--secondary-color); /* Teal for hover/active background */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Header Icons (Cart, Location, Menu Toggle) */
+/* Style for SVGs used as icons within header links or buttons */
+header .nav-list a svg.icon, /* For icons like cart, location inside <a> tags */
+.mobile-menu-button svg {     /* For the mobile menu toggle button's SVG */
+    fill: var(--white-color); /* Make SVG icons white */
+    width: 24px; 
+    height: 24px; 
+    cursor: pointer;
+    vertical-align: middle; /* Align icons nicely with text if any */
+}
+header .nav-list a svg.icon {
+    margin-right: 0.5rem; /* Space between icon and text if icon is part of a link */
+}
+
+header #cart-item-count { /* Styling for the cart item counter text */
+    color: var(--white-color);
+    font-size: 1.4rem; 
+    margin-left: -0.5rem; /* Adjust as needed for positioning next to cart icon */
+}
+
+/* Mobile Menu Button Specifics (already targeted its SVG above) */
+.mobile-menu-button {
+    background: none; /* Ensure no background color */
+    border: none; /* Ensure no border */
+    cursor: pointer;
+    display: none; /* Hidden by default, shown in media query for mobile */
+    padding: 0.5rem; /* Add some padding for easier tapping */
+}
+
+/* Search Bar */
+header .search-bar {
+    display: flex;
+    align-items: center;
+}
+header .search-bar input[type="search"] {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--medium-grey-color);
+    border-radius: 4px 0 0 4px;
+    font-size: 1.4rem;
+    color: var(--dark-text-color);
+    background-color: var(--white-color);
+}
+header .search-bar button[type="submit"] {
+    padding: 0.8rem 1.2rem;
+    background-color: var(--secondary-color); /* Teal for search button */
+    color: var(--white-color);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1.4rem;
+    border: none; /* Remove default button border */
+}
+header .search-bar button[type="submit"]:hover {
+    background-color: var(--accent-color); /* Gold on hover */
+    color: var(--dark-text-color);
+}
+/*navbar style end here*/
+
+/*slider style start*/
+.home .home-slider .slide
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: flex-start;
+
+}
+.home .home-slider .slide1 
+{
+    background: url(images/slider/slider1.jpg);
+}
+.home .home-slider .slide2 
+{
+    background: url(images/slider/slider2.jpg);
+}
+.home .home-slider .slide3 
+{
+    background: url(images/slider/slider3.jpg);
+}
+.home .home-slider .slide1,
+.home .home-slider .slide2, 
+.home .home-slider .slide3 
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home .home-slider .slide .content 
+{
+    text-align: center;
+    padding-left: 9rem;
+}
+.home .home-slider .slide .content h3 
+{
+    color: red;
+    font-size:6rem;
+    font-weight:300;
+}
+.home .home-slider .slide .content h1 
+{
+    color: #fff;
+    font-size: 8rem;
+}
+.home .home-slider .slide .content p 
+{
+    color: white;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding: .5rem 0;
+    line-height: 1.5;
+    font-weight: 200;
+}
+.btn 
+{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    border: .1rem solid rgba(205, 170, 124, 0.2);
+    background: transparent;
+    cursor: pointer;
+    padding: .8rem 3rem;
+    position: relative;
+    overflow: hidden; 
+    z-index: 1;
+}
+.btn:before 
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--light-color);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: .5s;
+
+}
+.btn:hover.btn:before 
+{
+    left: 0;
+}
+.swiper-pagination-bullet 
+{
+    background: var(--light-color)!important;
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 0 !important;
+}
+/*slider style end*/
+
+/* Call to Action Button Styles */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none; /* Ensure no default button border */
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color); /* Darker teal on hover */
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+/* Form Elements Styling (General) */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color); /* Teal for labels */
+    font-weight: 500;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="search"], /* Added search for consistency */
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--medium-grey-color);
+    border-radius: 4px;
+    font-size: 1.6rem;
+    color: var(--dark-text-color);
+    background-color: var(--white-color);
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="search"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0.5rem rgba(255, 127, 80, 0.25); /* Subtle focus glow */
+}
+
+/* General Section Styling (if needed, or remove if too generic) */
+section{ /* This was in the original, might be too broad or useful */
+    padding: 2rem 9%; /* Reduced padding from original 8rem */
+}
+
+/* Heading styles (already defined, but if .heading/.sub-heading are used, they need review) */
+/* Removing original .heading and .sub-heading as they are very specific and might not fit new design */
+/*
+.heading 
+{
+    text-align: center;
+    color: var(--black); // Now var(--dark-text-color)
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3rem;
+}
+.sub-heading 
+{
+    text-align: center;
+	color: var(--light-color); // Now var(--primary-color)
+	font-size: 2.5rem;
+	padding: .5rem 2rem;
+	font-weight: 300;
+	margin-bottom: 4rem;
+	background: var(--black); // Now var(--dark-text-color)
+	display: inline-block;  
+}
+*/
+
+/*welcome style start*/
+/* Removing .welcome styles as per instruction */
+/*welcome style end*/
+
+/*our-service style  start*/
+/* Removing .our-menu styles as per instruction */
+/*our-menu style ends*/
+
+/* Product Card Styling */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.product-card {
+    background-color: var(--white-color);
+    border: 1px solid #e0e0e0; /* Lighter grey for card border */
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Limit image height */
+    object-fit: contain; /* Or 'cover' if preferred */
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+.product-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color); /* Coral for product titles */
+    margin-bottom: 0.5rem;
+}
+.product-card .price {
+    font-size: 1.6rem;
+    color: var(--dark-text-color);
+    margin-bottom: 0.5rem;
+}
+.product-card .price del { /* For original price when discounted */
+    color: var(--medium-grey-color);
+    margin-right: 0.5rem;
+    font-size: 1.4rem; /* Slightly smaller */
+}
+.product-card .description {
+    font-size: 1.4rem;
+    color: var(--medium-grey-color);
+    margin-bottom: 1rem;
+    min-height: 4.2em; /* Approx 3 lines of text, adjust as needed */
+}
+.product-card .add-to-cart-btn { /* Specific styling for add-to-cart buttons within product cards */
+    background-color: var(--secondary-color); /* Teal for Add to Cart */
+    color: var(--white-color);
+    /* Inherits .cta-button styles for padding, border-radius etc. */
+}
+.product-card .add-to-cart-btn:hover {
+    background-color: var(--primary-color); /* Coral on hover */
+    color: var(--white-color);
+}
+
+/*our chef style start*/
+/* Removing .our-chef styles as per instruction */
+/*our chef style ends*/
+
+/* Blog Sections Styling (blog.html, single-post.html) */
+article.blog-post-summary,
+article.blog-post-full {
+    background-color: var(--white-color);
+    border: 1px solid #e0e0e0; /* Lighter grey for consistency */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 2rem; /* Increased padding for blog articles */
+    box-shadow: var(--box-shadow);
+}
+
+article.blog-post-summary h2 a, /* Links in blog summary titles */
+article.blog-post-full h1 { /* Main title in single post */
+    color: var(--primary-color);
+    text-decoration: none;
+}
+article.blog-post-summary h2 a:hover {
+    text-decoration: underline;
+}
+
+.post-meta {
+    color: var(--medium-grey-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post-content { /* Container for the main content of a blog post */
+    margin-top: 1.5rem;
+    line-height: 1.7; /* Improved line height for readability */
+}
+.blog-post-content h2 { /* Subtitles within post */
+    color: var(--secondary-color);
+    font-size: 2.2rem; /* Slightly smaller than main H2 */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.blog-post-content p { /* Paragraphs within blog content */
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+}
+.blog-post-content blockquote {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1.5rem; 
+    margin: 1.5rem 0;
+    color: var(--medium-grey-color);
+    font-style: italic;
+}
+.blog-post-content ul {
+    list-style-position: inside; 
+    margin-left: 1rem; 
+    margin-bottom: 1.5rem; /* Space below lists */
+}
+.blog-post-content ul li {
+    margin-bottom: 0.5rem; /* Space between list items */
+}
+
+/* Placeholder image styles for blog posts */
+.blog-post-summary img, 
+.blog-post-full img { /* General style for images within blog posts */
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+    margin-top: 1rem; /* Space above image if it follows text */
+    margin-bottom: 1.5rem; /* Space below image */
+    border-radius: 4px; 
+}
+/* Specifics for images if needed, e.g., main image in single post */
+.blog-post-full img.main-post-image { /* Assumes class="main-post-image" on the main image */
+    max-height: 400px; 
+    object-fit: cover; /* Crop to fit if aspect ratio differs */
+    width: 100%; /* Make it span the content area */
+}
+/* End Blog Sections Styling */
+
+/*reservation style start*/
+/* Removing .reservation styles as per instruction */
+/*reservation style end*/
+
+/* Customer Reviews Section Styling (product-detail.html #customer-reviews) */
+#customer-reviews {
+    margin-top: 3rem; /* Space above the reviews section */
+}
+#customer-reviews h2 { /* Title of the reviews section */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2.5rem; /* Increased margin from 2rem */
+    font-size: 2.6rem; /* Slightly larger for section title */
+}
+
+.customer-comment { /* Styling for each individual comment box */
+    background-color: var(--white-color);
+    border: 1px solid #e0e0e0; /* Lighter grey for consistency */
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.comment-author-info { /* Container for avatar and author name/date */
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover; /* Ensure avatar images fill the circle nicely */
+}
+
+.comment-author-name {
+    font-weight: bold;
+    color: var(--secondary-color); /* Teal for author name */
+    font-size: 1.6rem; 
+}
+
+.comment-date {
+    font-size: 1.2rem;
+    color: var(--medium-grey-color);
+    margin-left: 0.5rem; /* Space from name if on same line */
+}
+
+.comment-rating span { /* For star ratings */
+    color: var(--accent-color); /* Golden yellow for stars */
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem; 
+    display: block; /* Ensure margin-bottom applies */
+}
+
+.comment-text {
+    margin-bottom: 1rem;
+    font-size: 1.5rem; 
+    line-height: 1.7; /* Improved readability */
+}
+
+.comment-customer-image { /* For images uploaded by customers with their comments */
+    max-width: 100px; 
+    max-height: 100px; 
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    object-fit: cover;
+    border: 1px solid #e0e0e0; /* Optional light border for these images */
+}
+
+.new-comment-form { /* Styling for the form to add new comments */
+    background-color: var(--white-color);
+    border: 1px solid #e0e0e0; /* Lighter grey */
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem; /* Space above the form */
+    box-shadow: var(--box-shadow);
+}
+.new-comment-form h3 { /* Title for the new comment form */
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+/* General form group and input styles are defined above and will apply */
+/* End Customer Reviews Styling */
+
+/* Cart Page Specific Styles */
+#cart-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are neat */
+    margin-bottom: 2rem;
+    background-color: var(--white-color); /* White background for the table */
+    box-shadow: var(--box-shadow); /* Consistent shadow */
+}
+#cart-table th, #cart-table td {
+    border: 1px solid #e0e0e0; /* Lighter grey for cell borders */
+    padding: 1.2rem 1.5rem; /* Increased padding for better spacing */
+    text-align: left;
+    vertical-align: middle; /* Align content vertically in cells */
+}
+#cart-table th {
+    background-color: var(--dark-text-color); /* Dark background for table headers */
+    color: var(--white-color); /* White text for table headers */
+    font-size: 1.6rem;
+    font-weight: 500; /* Slightly less bold for header text */
+}
+#cart-table td .cart-item-image {
+    width: 70px; /* Slightly larger image */
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1.5rem; /* More space next to image */
+    vertical-align: middle;
+}
+#cart-table td .cart-item-name {
+    vertical-align: middle;
+    font-weight: 500; /* Make product name slightly bolder */
+}
+#cart-table td .cart-quantity-input {
+    width: 70px; /* Slightly wider input */
+    padding: 0.8rem; /* Better padding */
+    text-align: center;
+    border: 1px solid var(--medium-grey-color); 
+    border-radius: 4px; 
+    font-size: 1.5rem; /* Larger font for quantity */
+}
+#cart-table td .remove-item-btn {
+    background-color: var(--accent-color); /* Gold for remove button */
+    color: var(--dark-text-color);
+    padding: 0.8rem 1.2rem; /* Adjusted padding */
+    border-radius: 4px;
+    cursor: pointer;
+    border: none; 
+    font-weight: 500; /* Make button text slightly bolder */
+}
+#cart-table td .remove-item-btn:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+}
+
+.cart-summary {
+    text-align: right;
+    margin-bottom: 2rem;
+    background-color: var(--white-color); 
+    padding: 2rem; /* Increased padding */
+    border-radius: 8px; 
+    box-shadow: var(--box-shadow); 
+}
+.cart-summary p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem; /* More space between summary lines */
+}
+.cart-summary .total {
+    font-weight: bold;
+    font-size: 2rem; /* Larger total font size */
+    color: var(--primary-color);
+}
+.checkout-btn { /* This class is likely on a .cta-button */
+    display: block; /* Make it block to control width/margin */
+    width: auto; /* Auto width based on content and padding */
+    min-width: 200px; /* Minimum width for better appearance */
+    margin-left: auto; /* Aligns right if parent is wide enough */
+    margin-top: 1rem; /* Space above button */
+}
+/* End Cart Page Specific Styles */
+
+/*blog style start*/
+/* Removing old .blog styles as new blog styles are more specific */
+/*blog style ends*/
+
+/* Footer Styles */
+/* Assuming the footer HTML is: <footer class="container">...</footer> 
+   If not, and footer is full-width with a .container div inside, adjust accordingly.
+   The prompt implies the main footer element gets these styles.
+*/
+footer.container { /* If footer itself has the .container class for width constraint */
+    background: var(--dark-text-color); /* Dark background for footer */
+    color: var(--light-bg-color); /* Light text color for footer */
+    padding: 3rem 7%; /* Padding from prompt example */
+    text-align: center; /* Center align text in footer */
+    margin-top: 2rem; /* Add some space above the footer */
+}
+
+/* If footer is full-width and .container is inside for content alignment:
+footer {
+    background: var(--dark-text-color);
+    color: var(--light-bg-color);
+    padding: 3rem 0; // Vertical padding on footer element
+    text-align: center;
+    margin-top: 2rem;
+}
+footer .container { // Then style the inner container if needed, e.g., for text color
+    padding: 0 2rem; // Horizontal padding for content within the full-width footer
+    color: var(--light-bg-color); // Ensure text color if not inherited
+}
+*/
+
+footer p { /* Styling for paragraph text in footer, e.g., copyright */
+    margin-bottom: 1rem;
+    font-size: 1.4rem; /* Ensure readable font size */
+}
+
+footer ul { /* Styling for lists in footer, e.g., nav links */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin-top: 1rem; /* Space above the list if there's text before it */
+}
+
+footer ul li {
+    display: inline-block; /* Align list items in a row */
+    margin: 0 1rem; /* Space between list items */
+}
+
+footer ul li a {
+    color: var(--primary-color); /* Coral for footer links */
+    text-decoration: none; /* Ensure no underline by default */
+}
+
+footer ul li a:hover {
+    color: var(--secondary-color); /* Teal on hover for footer links */
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+/*footer style ends*/
+
+/*custom scroll bar*/
+::-webkit-scrollbar {
+    width: 10px; /* Adjusted width */
+}
+::-webkit-scrollbar-track {
+    background: var(--light-bg-color); /* Light background for track */
+}
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color); /* Teal for thumb */
+    border-radius: 5px; /* Rounded thumb */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color); /* Coral on hover */
+}
+/*jump to top*/
+/* .topbtn style removed as it was not requested to be kept */
+
+/*media query*/
+@media (max-width: 991px) {
+    html {
+        font-size: 55%; /* Slightly smaller base font for medium devices */
+    }
+    /* Ensure header.container is targeted if the header element itself has the .container class */
+    header.container { 
+        padding: 1rem 2rem; /* Adjust padding for medium screens */
+    }
+    /* Removed .our-menu specific media queries as the section is removed */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Adjust body padding if mobile header is shorter */
+    }
+    /* Mobile Menu Button Visibility */
+    .mobile-menu-button {
+        display: block; /* Show mobile menu button */
+    }
+
+    /* Mobile Navigation List Styling */
+    header nav .nav-list {
+        position: absolute;
+        top: 100%; /* Position below header */
+        left: 0;
+        right: 0;
+        background: var(--primary-color); /* Match header background */
+        border-top: 0.1rem solid var(--light-bg-color); /* Separator line */
+        padding: 1rem 0; /* Vertical padding for the dropdown */
+        flex-direction: column; /* Stack links vertically */
+        display: none; /* Hidden by default, JS toggles to flex/block */
+        box-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.1); /* Subtle shadow for dropdown */
+    }
+    header nav .nav-list.active { /* Class added by JS to show menu */
+        display: flex; /* Show menu by changing display property */
+    }
+    header nav .nav-list li {
+        margin: 1rem 0; /* Vertical margin for list items */
+        width: 100%;
+        text-align: center;
+    }
+    header nav .nav-list a {
+        display: block; /* Make links full width */
+        padding: 1rem; /* Padding for touch targets */
+    }
+    /* Mobile active/hover for nav links */
+    header nav .nav-list a.active,
+    header nav .nav-list a:hover {
+        background-color: var(--white-color); /* White background on mobile active/hover */
+        color: var(--primary-color); /* Coral text on mobile active/hover */
+    }
+
+    /* Hide elements not suitable for mobile or to simplify layout */
+    header .search-bar {
+        display: none; /* Example: hide search bar on small screens */
+    }
+    
+    /* Adjust main container padding if body padding is not sufficient or if header height changes */
+    /* main.container {
+        padding-top: 0; /* Reset if body padding handles header offset 
+    } */
+
+    /* Product list adjustments for mobile */
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller cards on mobile */
+    }
+    .product-card .description {
+        min-height: auto; /* Allow description height to vary on mobile */
+    }
+
+    /* Checkout form adjustments for smaller screens */
+    .checkout-form .form-section {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+    /* Removed old .header .navbar, .home .home-slider, .welcome, .reservation media queries as those sections are removed or restyled */
+}

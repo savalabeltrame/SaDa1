@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaDa Store - Las 5 Tendencias de Moda Imprescindibles para Esta Temporada</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header class="container">
+        <a href="index.html" class="logo">SaDa Store</a>
+        <button class="mobile-menu-button" id="menu-toggle-button" aria-label="Open navigation menu">
+            <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Hombres</a></li>
+                <li><a href="products.html?category=women">Mujeres</a></li>
+                <li><a href="products.html?category=kids">Niños</a></li>
+                <li><a href="products.html?category=accessories">Accesorios</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li> <!-- Blog link is active here -->
+                <li>
+                    <a href="cart.html" aria-label="View Shopping Cart">
+                        <svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.993.993 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        <span id="cart-item-count">(0)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Devaldino+Josoel+Benelli+140%2C+S%C3%A3o+Crist%C3%B3v%C3%A3o%2C+Conc%C3%B3rdia+-+Santa+Catarina%2C+Brazil" 
+                       target="_blank" 
+                       aria-label="View Store Location">
+                        <svg class="icon icon-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="search" placeholder="Buscar productos...">
+            <button type="submit">Buscar</button>
+        </div>
+    </header>
+    <main class="container">
+        <article class="blog-post-full">
+            <header class="blog-post-header">
+                <h1>Las 5 Tendencias de Moda Imprescindibles para Esta Temporada</h1>
+                <p class="post-meta">Publicado el <time datetime="2023-10-27">27 Octubre, 2023</time> por SaDa Store</p>
+                <img src="images/placeholders/blog_placeholder1.png" alt="Imagen principal del artículo" class="main-post-image" style="width:100%; max-height:400px; object-fit: cover;"> <!-- Corrected Placeholder -->
+            </header>
+            
+            <section class="blog-post-content">
+                <p>¡Prepárate para renovar tu armario! Esta temporada trae consigo una explosión de creatividad y estilo. Una de las tendencias más destacadas es el regreso triunfal del colorblock, combinando tonos audaces y contrastantes para crear looks que no pasarán desapercibidos. Piensa en fucsia con naranja o verde esmeralda con azul cobalto. ¡Atrévete a experimentar!</p>
+                <p>Otra corriente que pisa fuerte son las texturas ricas y lujosas. El terciopelo, el satén y los tejidos con acabados metálicos se adueñan de prendas tanto de día como de noche, aportando un toque de sofisticación instantáneo. No olvides los estampados maximalistas: desde florales exuberantes hasta motivos geométricos abstractos, la clave está en no tener miedo de destacar.</p>
+                <p>Finalmente, la comodidad sigue siendo reina, pero con un giro elegante. Los conjuntos de punto coordinados, los pantalones anchos y fluidos, y las zapatillas de deporte de diseño se consolidan como piezas esenciales. La sostenibilidad también se hace notar, con un auge de materiales reciclados y técnicas de producción éticas que demuestran que la moda puede ser consciente y chic al mismo tiempo.</p>
+                
+                <h2>Explorando los Detalles</h2>
+                <p>Más allá de estas grandes tendencias, los pequeños detalles marcan la diferencia. Los accesorios oversize, como collares de eslabones gruesos y gafas de sol XL, siguen en boga. Las mangas abullonadas y los hombros marcados añaden un toque dramático a blusas y vestidos. En cuanto al calzado, las botas de plataforma y los mocasines robustos son los favoritos para complementar cualquier conjunto.</p>
+                <ul>
+                    <li>Colorblock Audaz</li>
+                    <li>Texturas Lujosas (terciopelo, satén)</li>
+                    <li>Estampados Maximalistas</li>
+                    <li>Comodidad Elegante</li>
+                    <li>Sostenibilidad Consciente</li>
+                </ul>
+                
+                <blockquote cite="https://www.sadastore.com/blog">
+                    <p>"La moda es la armadura para sobrevivir a la realidad de la vida cotidiana." - Bill Cunningham</p>
+                </blockquote>
+                
+                <p>En SaDa Store, hemos seleccionado cuidadosamente piezas que reflejan estas tendencias, para que puedas incorporarlas fácilmente a tu estilo personal. ¡Visita nuestra sección de Novedades y descubre tus próximos favoritos!</p>
+            </section>
+            
+            <section class="blog-post-author">
+                <h3>Sobre el Autor</h3>
+                <p>SaDa Store se dedica a traerte lo último en moda y estilo. Creemos que la moda es una forma de expresión y queremos ayudarte a encontrar la tuya.</p>
+            </section>
+            
+            <section class="blog-post-comments-preview"> <!-- Vista previa de comentarios o enlace a sección completa -->
+                <h3>Comentarios</h3>
+                <p><em>(La sección de comentarios de clientes se desarrollará en un próximo paso.)</em></p>
+                <!-- Aquí podrían ir algunos comentarios o un enlace a la sección de comentarios si es muy larga -->
+                <a href="#comments-section-full" class="cta-button">Ver / Dejar Comentarios</a>
+            </section>
+
+            <nav class="blog-post-navigation">
+                <a href="blog.html" class="cta-button">&larr; Volver al Blog</a>
+                <!-- Podría haber enlaces a "Artículo Anterior" / "Artículo Siguiente" si se implementa esa lógica -->
+            </nav>
+        </article>
+    </main>
+    <footer class="container">
+        <p>&copy; 2023 SaDa Store. Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Términos & Condiciones</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

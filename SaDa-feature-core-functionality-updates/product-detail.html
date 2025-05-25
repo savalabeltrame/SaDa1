@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaDa Store - Product Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <a href="index.html" class="logo">SaDa Store</a>
+        <button class="mobile-menu-button" id="menu-toggle-button" aria-label="Open navigation menu">
+            <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Men</a></li>
+                <li><a href="products.html?category=women">Women</a></li>
+                <li><a href="products.html?category=kids">Kids</a></li>
+                <li><a href="products.html?category=accessories">Accessories</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li>
+                    <a href="cart.html" aria-label="View Shopping Cart">
+                        <svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.993.993 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        <span id="cart-item-count">(0)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Devaldino+Josoel+Benelli+140%2C+S%C3%A3o+Crist%C3%B3v%C3%A3o%2C+Conc%C3%B3rdia+-+Santa+Catarina%2C+Brazil" 
+                       target="_blank" 
+                       aria-label="View Store Location: Rua Devaldino Josoel Benelli 140, São Cristóvão, Concórdia - Santa Catarina, Brazil on Google Maps">
+                        <svg class="icon icon-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="search" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+    <main class="container">
+        <section class="product-detail-layout">
+            <div class="product-image-gallery">
+                <!-- Main product image -->
+                <img src="images/placeholders/placeholder-product-main.png" alt="Product Main Image" class="main-image" id="product-image-detail">
+                <!-- Thumbnail images -->
+                <div class="thumbnail-images" id="product-thumbnail-images-detail">
+                    <!-- Thumbnails would also be populated dynamically or have specific IDs if individually targetable -->
+                    <img src="images/placeholders/placeholder-product-thumb1.png" alt="Product Thumbnail 1" class="active">
+                    <img src="images/placeholders/placeholder-product-thumb2.png" alt="Product Thumbnail 2">
+                    <img src="images/placeholders/placeholder-product-thumb3.png" alt="Product Thumbnail 3">
+                </div>
+            </div>
+            <div class="product-info" data-product-id="sada001" data-product-name="Example Product"> <!-- Example ID, will be set dynamically -->
+                <h1 id="product-name-detail">Detailed Product Name</h1>
+                <p class="price">
+                    <del id="product-original-price-detail"></del>
+                    <span id="product-discounted-price-detail">$79.99</span>
+                </p>
+                <p id="product-description-detail">This is a detailed description of the product. It highlights key features, materials, and why this product is a great choice for the customer. More text can go here to fill up space.</p>
+                <div class="product-options">
+                    <div>
+                        <label for="size-select">Size:</label>
+                        <select id="size-select" name="size">
+                            <option value="s">Small</option>
+                            <option value="m" selected>Medium</option>
+                            <option value="l">Large</option>
+                            <option value="xl">Extra Large</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="color-select">Color:</label>
+                        <select id="color-select" name="color">
+                            <option value="blue">Blue</option>
+                            <option value="red" selected>Red</option>
+                            <option value="black">Black</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantity-input">Quantity:</label>
+                        <input type="number" id="quantity-input" name="quantity" value="1" min="1">
+                    </div>
+                </div>
+                <button class="add-to-cart-btn" data-product-id="301">Add to Cart</button>
+            </div>
+        </section>
+        <section id="related-products" class="container">
+            <h2>Related Products</h2>
+            <div class="product-list">
+                <!-- Placeholder related product 1 -->
+                <div class="product-card" data-product-id="302" data-product-name="Related Product 1">
+                    <img src="images/placeholder-related1.png" alt="Related Product 1">
+                    <h3>Related Product 1</h3>
+                    <p class="price">$49.99</p>
+                    <button class="add-to-cart-btn" data-product-id="302">Add to Cart</button>
+                </div>
+                <!-- Placeholder related product 2 -->
+                <div class="product-card" data-product-id="303" data-product-name="Related Product 2">
+                    <img src="images/placeholder-related2.png" alt="Related Product 2">
+                    <h3>Related Product 2</h3>
+                    <p class="price">$59.99</p>
+                    <button class="add-to-cart-btn" data-product-id="303">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="customer-reviews" class="container">
+            <h2>Comentarios de Nuestros Clientes</h2>
+            <div class="comments-list">
+                <!-- Comentario 1 (Ejemplo) -->
+                <div class="customer-comment">
+                    <div class="comment-author-info">
+                        <img src="images/placeholders/avatar_placeholder_jane.png" alt="Avatar de Ana G." class="comment-avatar">
+                        <div>
+                            <span class="comment-author-name">Ana G.</span>
+                            <time class="comment-date" datetime="2023-10-28">28 Octubre, 2023</time>
+                        </div>
+                    </div>
+                    <div class="comment-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <p class="comment-text">¡Me encantó este producto! La calidad supera las expectativas y el diseño es tal cual se ve en las fotos. El envío fue rapidísimo. ¡Totalmente recomendado!</p>
+                    <img src="images/placeholders/comment_image_jacket.png" alt="Cliente mostrando el producto" class="comment-customer-image">
+                </div>
+
+                <!-- Comentario 2 (Ejemplo) -->
+                <div class="customer-comment">
+                    <div class="comment-author-info">
+                        <img src="images/placeholders/avatar_placeholder_john.png" alt="Avatar de Carlos M." class="comment-avatar">
+                        <div>
+                            <span class="comment-author-name">Carlos M.</span>
+                            <time class="comment-date" datetime="2023-10-25">25 Octubre, 2023</time>
+                        </div>
+                    </div>
+                    <div class="comment-rating">
+                        <span>★★★★☆</span>
+                    </div>
+                    <p class="comment-text">Buen producto en general. Cumple con lo descrito y los materiales parecen de buena calidad. Le doy 4 estrellas porque el color en persona es ligeramente diferente al que vi en pantalla, pero aún así me gusta.</p>
+                    <!-- Sin imagen de cliente para este comentario, para mostrar variabilidad -->
+                </div>
+                
+                <!-- Formulario para nuevo comentario (estructura básica, sin funcionalidad JS por ahora) -->
+                <div class="new-comment-form">
+                    <h3>Deja tu Comentario</h3>
+                    <form id="comment-form">
+                        <div class="form-group">
+                            <label for="commenter-name">Nombre:</label>
+                            <input type="text" id="commenter-name" name="commenter-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commenter-rating">Calificación:</label>
+                            <select id="commenter-rating" name="commenter-rating">
+                                <option value="5">5 Estrellas</option>
+                                <option value="4">4 Estrellas</option>
+                                <option value="3">3 Estrellas</option>
+                                <option value="2">2 Estrellas</option>
+                                <option value="1">1 Estrella</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-message">Tu Comentario:</label>
+                            <textarea id="comment-message" name="comment-message" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-image">Sube una imagen (opcional):</label>
+                            <input type="file" id="comment-image" name="comment-image" accept="image/*">
+                        </div>
+                        <button type="submit" class="cta-button">Enviar Comentario</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <p>&copy; 2023 SaDa Store. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+    <script src="main.js" defer></script>
+</body>
+</html>
