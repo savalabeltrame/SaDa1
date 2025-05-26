@@ -42,10 +42,22 @@ body {
     padding-top: 80px; /* Approximate height of fixed header to prevent content overlap */
 }
 
-/* Text Overflow Prevention - Applied to common text-hosting elements */
-p, h1, h2, h3, h4, h5, h6, span, a, li {
+/* Text Overflow Prevention - Primarily for paragraph text */
+p {
     overflow-wrap: break-word;
     word-wrap: break-word; /* Legacy fallback */
+}
+
+/* Targeted Text Overflow Prevention for specific content classes */
+.product-card .description,
+.blog-post-content p, /* Ensures blog paragraphs wrap, inherits from p but good for clarity */
+.comment-text,
+article.blog-post-summary > p, /* Direct paragraph children of blog post summaries */
+#hero p, /* Paragraphs within the hero section */
+#call-to-action p, /* Paragraphs within the call-to-action section */
+#product-description-detail { /* The main product description paragraph */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 /* General Link Styles */
