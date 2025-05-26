@@ -777,7 +777,39 @@ footer ul li a:hover {
     header nav .nav-list a {
         display: block; /* Make links full width */
         padding: 1rem; /* Padding for touch targets */
+        /* General color and background for hover/active are defined below */
     }
+
+    /* New styles for .nav-category-item within the mobile menu */
+    header nav .nav-list li.nav-category-item a {
+        display: flex; /* Align image and span horizontally */
+        align-items: center; /* Vertically center content */
+        justify-content: flex-start; /* Align content to the left, default for flex but explicit */
+        padding: 0.8rem 1.5rem; /* Specific padding for items with images */
+    }
+
+    header nav .nav-list li.nav-category-item img {
+        width: 35px; /* Slightly smaller for balance */
+        height: 35px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-right: 15px; /* More space between image and text */
+    }
+
+    header nav .nav-list li.nav-category-item span {
+        font-size: 1.6rem; /* Consistent font size */
+        /* Color is inherited from the 'a' tag's color property */
+    }
+    
+    /* Ensure other direct links (Home, Blog, icons) remain centered. */
+    /* The text-align:center on 'li' and display:block on 'a' should suffice. */
+    /* If specific overrides are needed for non-category items: */
+    header nav .nav-list li:not(.nav-category-item) > a {
+         /* text-align: center; by default from li */
+         /* padding: 1rem; already set */
+         /* justify-content: center; /* Only if 'a' was also made flex */
+    }
+
     /* Mobile active/hover for nav links */
     header nav .nav-list a.active,
     header nav .nav-list a:hover {
