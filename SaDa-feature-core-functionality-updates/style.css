@@ -435,9 +435,16 @@ header nav .nav-list li.language-switcher .language-options li a img {
 }
 
 /* General Section Styling (if needed, or remove if too generic) */
-section{ /* This was in the original, might be too broad or useful */
-    padding: 2rem 9%; /* Reduced padding from original 8rem */
+/* section{ // This was in the original, might be too broad or useful 
+    padding: 2rem 9%; // Reduced padding from original 8rem 
+} */
+.content-section {
+    padding: 2rem 9%; /* Standard padding for content sections */
+    /* If sections also have .container class, this padding might need adjustment */
+    /* or be applied to an inner wrapper if .container is for max-width only. */
+    /* For now, assuming .content-section is the primary padded element. */
 }
+
 
 /* Heading styles (already defined, but if .heading/.sub-heading are used, they need review) */
 /* Removing original .heading and .sub-heading as they are very specific and might not fit new design */
@@ -471,6 +478,49 @@ section{ /* This was in the original, might be too broad or useful */
 /*our-service style  start*/
 /* Removing .our-menu styles as per instruction */
 /*our-menu style ends*/
+
+/* Category List Styling (Shop by Category on Homepage) */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem; /* Space above the category list */
+}
+
+.category-card {
+    background-color: var(--white-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.category-card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; /* Adjusted height for category preview images */
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.category-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.category-card h3 a {
+    color: inherit; /* Inherit color from h3 */
+    text-decoration: none;
+}
+
+.category-card h3 a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color); /* Change color on hover */
+}
+/* End Category List Styling */
 
 /* Product Card Styling */
 .product-list {
