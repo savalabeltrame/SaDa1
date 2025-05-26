@@ -120,7 +120,16 @@ header nav .nav-list a.active {
 
 /* Header Icons (Cart, Location, Menu Toggle) */
 /* Style for SVGs used as icons within header links or buttons */
-header .nav-list a svg.icon, /* For icons like cart, location inside <a> tags */
+header nav .nav-list a svg.icon { /* For icons like cart, location inside <a> tags */
+    display: inline-block !important;
+    fill: #FFFFFF !important; /* Make SVG icons white */
+    width: 24px; 
+    height: 24px; 
+    cursor: pointer;
+    vertical-align: middle; /* Align icons nicely with text if any */
+    margin-right: 0.5rem; /* Space between icon and text if icon is part of a link */
+}
+
 .mobile-menu-button svg {     /* For the mobile menu toggle button's SVG */
     fill: var(--white-color); /* Make SVG icons white */
     width: 24px; 
@@ -128,14 +137,48 @@ header .nav-list a svg.icon, /* For icons like cart, location inside <a> tags */
     cursor: pointer;
     vertical-align: middle; /* Align icons nicely with text if any */
 }
-header .nav-list a svg.icon {
-    margin-right: 0.5rem; /* Space between icon and text if icon is part of a link */
-}
 
 header #cart-item-count { /* Styling for the cart item counter text */
     color: var(--white-color);
     font-size: 1.4rem; 
     margin-left: -0.5rem; /* Adjust as needed for positioning next to cart icon */
+}
+
+/* Language Selector Styles */
+.language-selector-container {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Vertically align items */
+    margin-left: 1.5rem; /* Space from the preceding nav item */
+}
+
+.lang-link {
+    font-size: 1.5rem; /* Slightly smaller than main nav links */
+    color: var(--white-color);
+    padding: 0.3rem 0.6rem;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lang-link:hover,
+.lang-link.active-lang { /* Class to indicate the active language */
+    background-color: var(--secondary-color); /* Teal background for hover/active */
+    color: var(--white-color);
+}
+
+.lang-separator {
+    color: var(--white-color);
+    margin: 0 0.4rem; /* Space around the separator */
+    font-size: 1.5rem;
+}
+
+/* Adjustments for mobile if necessary - can be added later if needed */
+@media (max-width: 768px) {
+    .language-selector-container {
+        margin-left: 0; /* Reset margin for mobile if it's part of the vertical list */
+        margin-top: 0.5rem; /* Add some space if stacked */
+        justify-content: center; /* Center it in the mobile menu */
+    }
 }
 
 /* Mobile Menu Button Specifics (already targeted its SVG above) */
