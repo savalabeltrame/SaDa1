@@ -1,0 +1,24 @@
+{
+  "storeName": "Tienda SaDa",
+  "nav": {
+    "home": "Inicio",
+    "men": "Hombres",
+    "women": "Mujeres",
+    "kids": "Niños",
+    "accessories": "Accesorios",
+    "blog": "Blog",
+    "cart": "Ver Carrito de Compras",
+    "location": "Ver Ubicación de la Tienda"
+  },
+  "search": {
+    "placeholder": "Buscar productos...",
+    "button": "Buscar"
+  },
+  "footer": {
+    "rights": "© 2023 Tienda SaDa. Todos los derechos reservados.",
+    "contact": "Contáctanos",
+    "about": "Sobre Nosotros",
+    "faq": "Preguntas Frecuentes",
+    "terms": "Términos y Condiciones"
+  }
+}

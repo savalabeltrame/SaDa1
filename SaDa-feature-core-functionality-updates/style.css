@@ -175,6 +175,99 @@ header .search-bar button[type="submit"]:hover {
 }
 /*navbar style end here*/
 
+/* Language Switcher Styles - Desktop */
+header nav .nav-list li.language-switcher {
+    position: relative; /* For positioning the dropdown */
+    /* margin-left is inherited from general li style */
+}
+
+header nav .nav-list li.language-switcher .current-language {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem; /* Similar to other nav links */
+    color: var(--white-color);
+    border: 0.1rem solid transparent; /* Match other links */
+    border-radius: 4px; /* Match other links */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav .nav-list li.language-switcher .current-language:hover,
+header nav .nav-list li.language-switcher.open .current-language { /* Style when open */
+    background-color: var(--secondary-color); /* Teal for hover/open background */
+}
+
+header nav .nav-list li.language-switcher .current-language img {
+    width: 22px; 
+    height: auto;
+    margin-right: 8px;
+    border-radius: 3px; 
+}
+
+header nav .nav-list li.language-switcher .current-language span {
+    font-size: 1.7rem; /* Match other nav links */
+    line-height: 1; 
+}
+
+header nav .nav-list li.language-switcher .current-language .icon-dropdown {
+    fill: var(--white-color);
+    width: 18px; 
+    height: 18px; 
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+header nav .nav-list li.language-switcher.open .current-language .icon-dropdown {
+    transform: rotate(180deg);
+}
+
+header nav .nav-list li.language-switcher .language-options {
+    display: none; 
+    position: absolute;
+    top: calc(100% + 0.5rem); /* Position below the current-language div with a small gap */
+    right: 0; 
+    background-color: var(--white-color);
+    border: 1px solid var(--medium-grey-color);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    list-style: none;
+    margin: 0; 
+    padding: 0.5rem 0; 
+    z-index: 10001; 
+    min-width: 200px; 
+}
+
+header nav .nav-list li.language-switcher.open .language-options {
+    display: block;
+}
+
+header nav .nav-list li.language-switcher .language-options li a {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.5rem; /* Slightly more padding for dropdown items */
+    font-size: 1.6rem; 
+    color: var(--dark-text-color); 
+    text-decoration: none;
+    white-space: nowrap; 
+    border: none; 
+    border-radius: 0; 
+    background-color: transparent; /* Ensure no background from general 'a' hover */
+}
+
+header nav .nav-list li.language-switcher .language-options li a:hover {
+    background-color: var(--light-bg-color); 
+    color: var(--primary-color); 
+    text-decoration: none; /* Ensure no underline from general 'a' hover */
+}
+
+header nav .nav-list li.language-switcher .language-options li a img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+/* End Language Switcher Styles - Desktop */
+
 /*slider style start*/
 .home .home-slider .slide
 {
@@ -816,6 +909,75 @@ footer ul li a:hover {
         background-color: var(--white-color); /* White background on mobile active/hover */
         color: var(--primary-color); /* Coral text on mobile active/hover */
     }
+
+    /* Language Switcher Styles - Mobile */
+    header nav .nav-list li.language-switcher .current-language {
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        padding: 1rem; /* Consistent with other mobile nav links */
+        /* color: var(--white-color); Inherited from general 'a' in mobile if not overridden */
+        cursor: pointer;
+        /* background-color and border radius are handled by general 'a:hover' */
+    }
+    /* Hover/active for current-language button itself is covered by general 'a:hover' */
+    
+    header nav .nav-list li.language-switcher .current-language img {
+        width: 24px; 
+        height: auto;
+        margin-right: 10px;
+    }
+
+    header nav .nav-list li.language-switcher .current-language span {
+        font-size: 1.6rem; /* Match other mobile nav links */
+        /* color: var(--white-color); Inherited */
+    }
+
+    header nav .nav-list li.language-switcher .current-language .icon-dropdown {
+        /* fill: var(--white-color); Inherited or set by general '.icon' if any */
+        margin-left: 10px;
+        /* transition and transform for rotate already defined globally for .icon-dropdown */
+    }
+    /* Ensure dropdown icon color changes on hover of .current-language */
+    header nav .nav-list li.language-switcher .current-language:hover .icon-dropdown,
+    header nav .nav-list li.language-switcher.open .current-language .icon-dropdown {
+        fill: var(--primary-color); /* Coral when parent is hovered/active */
+    }
+    
+    header nav .nav-list li.language-switcher .language-options {
+        display: none; 
+        list-style: none;
+        padding: 0; 
+        margin: 0; 
+        background-color: rgba(0,0,0,0.1); /* Slightly darker than main mobile dropdown for visual hierarchy */
+        border-radius: 0; 
+        box-shadow: none; 
+        width: 100%; 
+        position: static; /* Flow naturally in the vertical mobile menu */
+        border: none; 
+    }
+
+    header nav .nav-list li.language-switcher.open .language-options {
+        display: block; 
+    }
+
+    header nav .nav-list li.language-switcher .language-options li a {
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        padding: 1rem 1.5rem; 
+        font-size: 1.5rem; 
+        /* color: var(--white-color); Inherited from general 'a' in mobile if not overridden */
+        border-top: 1px solid rgba(255,255,255,0.05); /* Very subtle separator */
+        /* Hover/active state is covered by general 'a:hover' for mobile */
+    }
+    
+    header nav .nav-list li.language-switcher .language-options li a img {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+    }
+    /* End Language Switcher Styles - Mobile */
 
     /* Hide elements not suitable for mobile or to simplify layout */
     header .search-bar {

@@ -1,0 +1,24 @@
+{
+  "storeName": "SaDa Store",
+  "nav": {
+    "home": "Home",
+    "men": "Men",
+    "women": "Women",
+    "kids": "Kids",
+    "accessories": "Accessories",
+    "blog": "Blog",
+    "cart": "View Shopping Cart",
+    "location": "View Store Location"
+  },
+  "search": {
+    "placeholder": "Search products...",
+    "button": "Search"
+  },
+  "footer": {
+    "rights": "© 2023 SaDa Store. All rights reserved.",
+    "contact": "Contact Us",
+    "about": "About Us",
+    "faq": "FAQ",
+    "terms": "Terms & Conditions"
+  }
+}

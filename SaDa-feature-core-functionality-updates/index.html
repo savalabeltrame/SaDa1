@@ -8,40 +8,52 @@
 </head>
 <body>
     <header class="container">
-        <a href="index.html" class="logo">SaDa Store</a>
+        <a href="index.html" class="logo" data-translate-key="storeName">SaDa Store</a>
         <button class="mobile-menu-button" id="menu-toggle-button" aria-label="Open navigation menu">
             <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </button>
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" data-translate-key="nav.home">Home</a></li>
                 <li class="nav-category-item">
                     <a href="products.html?category=men">
-                        <img src="images/categories/category_men.png" alt="Men's Category">
-                        <span>Men</span>
+                        <img src="images/categories/category_men.png" alt="Men's Category" data-translate-alt="altText.menCategoryNav">
+                        <span data-translate-key="nav.men">Men</span>
                     </a>
                 </li>
                 <li class="nav-category-item">
                     <a href="products.html?category=women">
-                        <img src="images/categories/category_women.png" alt="Women's Category">
-                        <span>Women</span>
+                        <img src="images/categories/category_women.png" alt="Women's Category" data-translate-alt="altText.womenCategoryNav">
+                        <span data-translate-key="nav.women">Women</span>
                     </a>
                 </li>
                 <li class="nav-category-item">
                     <a href="products.html?category=kids">
-                        <img src="images/categories/category_kids.png" alt="Kids' Category">
-                        <span>Kids</span>
+                        <img src="images/categories/category_kids.png" alt="Kids' Category" data-translate-alt="altText.kidsCategoryNav">
+                        <span data-translate-key="nav.kids">Kids</span>
                     </a>
                 </li>
                 <li class="nav-category-item">
                     <a href="products.html?category=accessories">
-                        <img src="images/categories/category_accessories.png" alt="Accessories Category">
-                        <span>Accessories</span>
+                        <img src="images/categories/category_accessories.png" alt="Accessories Category" data-translate-alt="altText.accessoriesCategoryNav">
+                        <span data-translate-key="nav.accessories">Accessories</span>
                     </a>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html" data-translate-key="nav.blog">Blog</a></li>
+                <li class="language-switcher">
+                    <div class="current-language">
+                        <img src="images/flags/gb.svg" alt="Current Language" data-translate-alt="altText.currentLanguageFlag">
+                        <span data-translate-key="currentLang">EN</span>
+                        <svg class="icon icon-dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </div>
+                    <ul class="language-options">
+                        <li><a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="English Flag" data-translate-alt="altText.englishFlag"> <span data-translate-key="lang.en">English</span></a></li>
+                        <li><a href="#" data-lang="es"><img src="images/flags/es.svg" alt="Spanish Flag" data-translate-alt="altText.spanishFlag"> <span data-translate-key="lang.es">Español</span></a></li>
+                        <li><a href="#" data-lang="pt"><img src="images/flags/pt.svg" alt="Portuguese Flag" data-translate-alt="altText.portugueseFlag"> <span data-translate-key="lang.pt">Português</span></a></li>
+                    </ul>
+                </li>
                 <li>
-                    <a href="cart.html" aria-label="View Shopping Cart">
+                    <a href="cart.html" aria-label="View Shopping Cart" data-translate-key="nav.cart" data-translate-aria-label>
                         <svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
                             <path d="M0 0h24v24H0V0z" fill="none"/>
                             <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.993.993 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
@@ -52,7 +64,7 @@
                 <li>
                     <a href="https://www.google.com/maps/search/?api=1&query=Rua+Devaldino+Josoel+Benelli+140%2C+S%C3%A3o+Crist%C3%B3v%C3%A3o%2C+Conc%C3%B3rdia+-+Santa+Catarina%2C+Brazil" 
                        target="_blank" 
-                       aria-label="View Store Location: Rua Devaldino Josoel Benelli 140, São Cristóvão, Concórdia - Santa Catarina, Brazil on Google Maps">
+                       aria-label="View Store Location: Rua Devaldino Josoel Benelli 140, São Cristóvão, Concórdia - Santa Catarina, Brazil on Google Maps" data-translate-key="nav.location" data-translate-aria-label>
                         <svg class="icon icon-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
                             <path d="M0 0h24v24H0V0z" fill="none"/>
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -62,64 +74,65 @@
             </ul>
         </nav>
         <div class="search-bar">
-            <input type="search" placeholder="Search products...">
-            <button type="submit">Search</button>
+            <input type="search" placeholder="Search products..." data-translate-key="search.placeholder" data-translate-placeholder>
+            <button type="submit" data-translate-key="search.button">Search</button>
         </div>
     </header>
     <main>
         <section id="hero">
             <div class="container">
-                <h1>Welcome to SaDa Store</h1>
-                <p>Your one-stop shop for the latest fashion trends.</p>
-                <a href="products.html" class="cta-button">Shop Now</a>
+                <h1 data-translate-key="homepage.welcomeTitle">Welcome to SaDa Store</h1>
+                <p data-translate-key="homepage.welcomeSubtitle">Your one-stop shop for the latest fashion trends.</p>
+                <a href="products.html" class="cta-button" data-translate-key="homepage.shopNowButton">Shop Now</a>
             </div>
         </section>
         <section id="featured-products" class="container">
-            <h2>Featured Products</h2>
+            <h2 data-translate-key="homepage.featuredProductsTitle">Featured Products</h2>
             <div class="product-list" id="featured-product-list">
                 <!-- Product cards will be dynamically inserted here by js/script.js -->
             </div>
         </section>
         <section id="shop-by-category" class="container">
-            <h2>Shop by Category</h2>
+            <h2 data-translate-key="homepage.shopByCategoryTitle">Shop by Category</h2>
             <div class="category-list">
                  <div class="category-card">
-                    <img src="images/categories/category_men.png" alt="Men's Category"> <!-- Corrected image path -->
-                    <h3><a href="products.html?category=men">Men</a></h3>
+                    <img src="images/categories/category_men.png" alt="Men's Category" data-translate-key="altText.menCategory" data-translate-alt> <!-- Corrected image path -->
+                    <h3><a href="products.html?category=men" data-translate-key="nav.men">Men</a></h3>
                 </div>
                 <div class="category-card">
-                    <img src="images/categories/category_women.png" alt="Women's Category"> <!-- Corrected image path -->
-                    <h3><a href="products.html?category=women">Women</a></h3>
+                    <img src="images/categories/category_women.png" alt="Women's Category" data-translate-key="altText.womenCategory" data-translate-alt> <!-- Corrected image path -->
+                    <h3><a href="products.html?category=women" data-translate-key="nav.women">Women</a></h3>
                 </div>
                 <div class="category-card">
-                    <img src="images/categories/category_kids.png" alt="Kids' Category"> <!-- Corrected image path -->
-                    <h3><a href="products.html?category=kids">Kids</a></h3>
+                    <img src="images/categories/category_kids.png" alt="Kids' Category" data-translate-key="altText.kidsCategory" data-translate-alt> <!-- Corrected image path -->
+                    <h3><a href="products.html?category=kids" data-translate-key="nav.kids">Kids</a></h3>
                 </div>
                 <div class="category-card">
-                    <img src="images/categories/category_accessories.png" alt="Accessories Category"> <!-- Corrected image path -->
-                    <h3><a href="products.html?category=accessories">Accessories</a></h3>
+                    <img src="images/categories/category_accessories.png" alt="Accessories Category" data-translate-key="altText.accessoriesCategory" data-translate-alt> <!-- Corrected image path -->
+                    <h3><a href="products.html?category=accessories" data-translate-key="nav.accessories">Accessories</a></h3>
                 </div>
             </div>
         </section>
         <section id="call-to-action" class="container text-center">
-            <h2>Subscribe to our Newsletter</h2>
-            <p>Get the latest updates on new products and upcoming sales.</p>
+            <h2 data-translate-key="homepage.newsletterTitle">Subscribe to our Newsletter</h2>
+            <p data-translate-key="homepage.newsletterSubtitle">Get the latest updates on new products and upcoming sales.</p>
             <form id="newsletter-form">
-                <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-                <button type="submit" class="cta-button">Subscribe</button>
+                <input type="email" id="newsletter-email" placeholder="Enter your email" required data-translate-key="homepage.newsletterEmailPlaceholder" data-translate-placeholder>
+                <button type="submit" class="cta-button" data-translate-key="homepage.subscribeButton">Subscribe</button>
             </form>
         </section>
     </main>
     <footer class="container">
-        <p>&copy; 2023 SaDa Store. All rights reserved.</p>
+        <p data-translate-key="footer.rights">&copy; 2023 SaDa Store. All rights reserved.</p>
         <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#" data-translate-key="footer.contact">Contact Us</a></li>
+            <li><a href="#" data-translate-key="footer.about">About Us</a></li>
+            <li><a href="#" data-translate-key="footer.faq">FAQ</a></li>
+            <li><a href="#" data-translate-key="footer.terms">Terms & Conditions</a></li>
         </ul>
     </footer>
     <script src="script.js"></script>
     <script src="main.js" defer></script>
+    <script src="i18n.js" defer></script>
 </body>
 </html>
