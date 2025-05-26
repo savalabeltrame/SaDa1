@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" data-translate-html-lang="blogPage.htmlLang">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaDa Store - Blog</title>
+    <title data-translate-key="blogPage.title">SaDa Store - Blog</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="main.js" defer></script>
 </head>
 <body>
     <header class="container">
-        <a href="index.html" class="logo">SaDa Store</a>
+        <a href="index.html" class="logo" data-translate-key="storeName">SaDa Store</a>
         <button class="mobile-menu-button" id="menu-toggle-button" aria-label="Open navigation menu">
             <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </button>
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Hombres</a></li>
-                <li><a href="products.html?category=women">Mujeres</a></li>
-                <li><a href="products.html?category=kids">Niños</a></li>
-                <li><a href="products.html?category=accessories">Accesorios</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html" data-translate-key="nav.home">Home</a></li>
+                <li><a href="products.html" data-translate-key="nav.men">Hombres</a></li>
+                <li><a href="products.html?category=women" data-translate-key="nav.women">Mujeres</a></li>
+                <li><a href="products.html?category=kids" data-translate-key="nav.kids">Niños</a></li>
+                <li><a href="products.html?category=accessories" data-translate-key="nav.accessories">Accesorios</a></li>
+                <li><a href="blog.html" class="active" data-translate-key="nav.blog">Blog</a></li>
+                <li class="language-switcher">
+                    <div class="current-language">
+                        <img src="images/flags/gb.svg" alt="Current Language" data-translate-alt="altText.currentLanguageFlag">
+                        <span data-translate-key="currentLang">EN</span>
+                        <svg class="icon icon-dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </div>
+                    <ul class="language-options">
+                        <li><a href="#" data-lang="en"><img src="images/flags/gb.svg" alt="English Flag" data-translate-alt="altText.englishFlag"> <span data-translate-key="lang.en">English</span></a></li>
+                        <li><a href="#" data-lang="es"><img src="images/flags/es.svg" alt="Spanish Flag" data-translate-alt="altText.spanishFlag"> <span data-translate-key="lang.es">Español</span></a></li>
+                        <li><a href="#" data-lang="pt"><img src="images/flags/pt.svg" alt="Portuguese Flag" data-translate-alt="altText.portugueseFlag"> <span data-translate-key="lang.pt">Português</span></a></li>
+                    </ul>
+                </li>
                 <li>
-                    <a href="cart.html" aria-label="View Shopping Cart">
+                    <a href="cart.html" aria-label="View Shopping Cart" data-translate-key="nav.cart" data-translate-aria-label>
                         <svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
                             <path d="M0 0h24v24H0V0z" fill="none"/>
                             <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.993.993 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
@@ -33,8 +45,8 @@
                 </li>
                 <li>
                     <a href="https://www.google.com/maps/search/?api=1&query=Rua+Devaldino+Josoel+Benelli+140%2C+S%C3%A3o+Crist%C3%B3v%C3%A3o%2C+Conc%C3%B3rdia+-+Santa+Catarina%2C+Brazil" 
-                       target="_blank" 
-                       aria-label="View Store Location">
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="View Store Location" data-translate-key="nav.location" data-translate-aria-label>
                         <svg class="icon icon-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
                             <path d="M0 0h24v24H0V0z" fill="none"/>
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -44,38 +56,38 @@
             </ul>
         </nav>
         <div class="search-bar">
-            <input type="search" placeholder="Buscar productos...">
-            <button type="submit">Buscar</button>
+            <input type="search" placeholder="Buscar productos..." data-translate-key="search.placeholder" data-translate-placeholder>
+            <button type="submit" data-translate-key="search.button">Buscar</button>
         </div>
     </header>
     <main class="container">
-        <h1>Nuestro Blog de Moda</h1>
+        <h1 data-translate-key="blogPage.mainHeading">Nuestro Blog de Moda</h1>
         <section id="blog-posts-list">
             <!-- Artículos del blog se listarán aquí -->
             <article class="blog-post-summary">
-                <h2><a href="single-post.html">Las 5 Tendencias de Moda Imprescindibles para Esta Temporada</a></h2>
-                <p class="post-meta">Publicado el <time datetime="2023-10-27">27 Octubre, 2023</time> por SaDa Store</p>
-                <img src="images/placeholders/blog_placeholder1.png" alt="Imagen del artículo" style="width:100%; max-width:300px;"> <!-- Corrected Placeholder -->
-                <p>Descubre los looks que dominarán las calles esta temporada. Desde colores vibrantes hasta siluetas reinventadas, te contamos todo lo que necesitas saber para estar a la última.</p>
-                <a href="single-post.html" class="cta-button">Leer Más</a>
+                <h2><a href="single-post.html" data-translate-key="blogPage.post1Title">Las 5 Tendencias de Moda Imprescindibles para Esta Temporada</a></h2>
+                <p class="post-meta"><span data-translate-key="blogPage.postMetaPrefix">Publicado el</span> <time datetime="2023-10-27">27 Octubre, 2023</time> <span data-translate-key="blogPage.postMetaSuffix">por</span> SaDa Store</p>
+                <img src="images/placeholders/blog_placeholder1.png" alt="Imagen del artículo" style="width:100%; max-width:300px;" data-translate-alt="blogPage.articleImageAlt" loading="lazy"> <!-- Corrected Placeholder -->
+                <p data-translate-key="blogPage.post1Excerpt">Descubre los looks que dominarán las calles esta temporada. Desde colores vibrantes hasta siluetas reinventadas, te contamos todo lo que necesitas saber para estar a la última.</p>
+                <a href="single-post.html" class="cta-button" data-translate-key="blogPage.readMoreButton">Leer Más</a>
             </article>
             <article class="blog-post-summary">
-                <h2><a href="single-post.html">Cómo Combinar Accesorios para Elevar tu Estilo Diario</a></h2>
-                <p class="post-meta">Publicado el <time datetime="2023-10-25">25 Octubre, 2023</time> por SaDa Store</p>
-                <img src="images/placeholders/blog_placeholder2.png" alt="Imagen del artículo" style="width:100%; max-width:300px;"> <!-- Corrected Placeholder -->
-                <p>Los accesorios son la clave para transformar cualquier atuendo básico en una declaración de estilo. Aprende a elegir y combinar collares, bolsos y más para un look impactante.</p>
-                <a href="single-post.html" class="cta-button">Leer Más</a>
+                <h2><a href="single-post.html" data-translate-key="blogPage.post2Title">Cómo Combinar Accesorios para Elevar tu Estilo Diario</a></h2>
+                <p class="post-meta"><span data-translate-key="blogPage.postMetaPrefix">Publicado el</span> <time datetime="2023-10-25">25 Octubre, 2023</time> <span data-translate-key="blogPage.postMetaSuffix">por</span> SaDa Store</p>
+                <img src="images/placeholders/blog_placeholder2.png" alt="Imagen del artículo" style="width:100%; max-width:300px;" data-translate-alt="blogPage.articleImageAlt" loading="lazy"> <!-- Corrected Placeholder -->
+                <p data-translate-key="blogPage.post2Excerpt">Los accesorios son la clave para transformar cualquier atuendo básico en una declaración de estilo. Aprende a elegir y combinar collares, bolsos y más para un look impactante.</p>
+                <a href="single-post.html" class="cta-button" data-translate-key="blogPage.readMoreButton">Leer Más</a>
             </article>
             <!-- Más resúmenes de artículos pueden ir aquí -->
         </section>
     </main>
     <footer class="container">
-        <p>&copy; 2023 SaDa Store. Todos los derechos reservados.</p>
+        <p data-translate-key="footer.rights">&copy; 2023 SaDa Store. Todos los derechos reservados.</p>
         <ul>
-            <li><a href="#">Contáctanos</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Términos & Condiciones</a></li>
+            <li><a href="#" data-translate-key="footer.contact">Contáctanos</a></li>
+            <li><a href="#" data-translate-key="footer.about">Sobre Nosotros</a></li>
+            <li><a href="#" data-translate-key="footer.faq">FAQ</a></li>
+            <li><a href="#" data-translate-key="footer.terms">Términos & Condiciones</a></li>
         </ul>
     </footer>
     <script src="script.js" defer></script>

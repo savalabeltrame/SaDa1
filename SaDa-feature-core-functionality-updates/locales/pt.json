@@ -20,5 +20,100 @@
     "about": "Sobre Nós",
     "faq": "Perguntas Frequentes",
     "terms": "Termos e Condições"
+  },
+  "altText": {
+    "currentLanguageFlag": "Bandeira do idioma atual",
+    "englishFlag": "Bandeira inglesa",
+    "spanishFlag": "Bandeira espanhola",
+    "portugueseFlag": "Bandeira portuguesa",
+    "menCategoryNav": "Link de navegação da categoria de roupas masculinas",
+    "womenCategoryNav": "Link de navegação da categoria de roupas femininas",
+    "kidsCategoryNav": "Link de navegação da categoria de roupas infantis",
+    "accessoriesCategoryNav": "Link de navegação da categoria de acessórios",
+    "menCategory": "Link para produtos masculinos",
+    "womenCategory": "Link para produtos femininos",
+    "kidsCategory": "Link para produtos infantis",
+    "accessoriesCategory": "Link para acessórios"
+  },
+  "currentLang": "PT",
+  "lang": {
+    "en": "English",
+    "es": "Español",
+    "pt": "Português"
+  },
+  "homepage": {
+    "welcomeTitle": "Bem-vindo à Loja SaDa",
+    "welcomeSubtitle": "Sua loja completa para as últimas tendências da moda.",
+    "shopNowButton": "Comprar Agora",
+    "featuredProductsTitle": "Produtos em Destaque",
+    "shopByCategoryTitle": "Comprar por Categoria",
+    "newsletterTitle": "Assine nosso Boletim Informativo",
+    "newsletterSubtitle": "Receba as últimas atualizações sobre novos produtos e promoções.",
+    "newsletterEmailPlaceholder": "Digite seu e-mail",
+    "subscribeButton": "Assinar"
+  },
+  "productsPage": {
+    "title": "Nossos Produtos",
+    "filterByCategory": "Filtrar por Categoria",
+    "all": "Todos",
+    "priceRange": "Faixa de Preço",
+    "applyFilters": "Aplicar Filtros",
+    "sortBy": "Ordenar Por",
+    "nameAZ": "Nome (A-Z)",
+    "nameZA": "Nome (Z-A)",
+    "priceLowHigh": "Preço (Baixo-Alto)",
+    "priceHighLow": "Preço (Alto-Baixo)",
+    "noProductsFound": "Nenhum produto encontrado que corresponda aos seus critérios."
+  },
+  "blogPage": {
+    "title": "Nosso Blog de Moda",
+    "readMore": "Leia Mais"
+  },
+  "singlePostPage": {
+    "authorPrefix": "Por",
+    "relatedPosts": "Publicações Relacionadas",
+    "commentsTitle": "Comentários",
+    "leaveComment": "Deixe um Comentário",
+    "nameLabel": "Nome:",
+    "commentLabel": "Seu Comentário:",
+    "submitComment": "Enviar Comentário"
+  },
+  "cartPage": {
+    "title": "Seu Carrinho de Compras",
+    "emptyCart": "Seu carrinho está atualmente vazio.",
+    "productColumn": "Produto",
+    "priceColumn": "Preço",
+    "quantityColumn": "Quantidade",
+    "totalColumn": "Total",
+    "removeColumn": "Remover",
+    "subtotal": "Subtotal:",
+    "shipping": "Envio:",
+    "total": "Total:",
+    "checkoutButton": "Finalizar Compra"
+  },
+  "checkoutPage": {
+    "title": "Finalizar Compra",
+    "shippingAddress": "Endereço de Envio",
+    "billingAddress": "Endereço de Cobrança",
+    "sameAsShipping": "Igual ao endereço de envio",
+    "paymentInfo": "Informações de Pagamento",
+    "orderSummary": "Resumo do Pedido",
+    "placeOrderButton": "Fazer Pedido",
+    "fullNameLabel": "Nome Completo",
+    "addressLine1Label": "Linha de Endereço 1",
+    "cityLabel": "Cidade",
+    "zipCodeLabel": "CEP",
+    "countryLabel": "País",
+    "nameOnCardLabel": "Nome no Cartão",
+    "cardNumberLabel": "Número do Cartão"
+  },
+  "productDetailPage": {
+    "sizeLabel": "Tamanho:",
+    "colorLabel": "Cor:",
+    "quantityLabel": "Quantidade:",
+    "addToCartButton": "Adicionar ao Carrinho",
+    "relatedProductsTitle": "Produtos Relacionados",
+    "customerReviewsTitle": "Avaliações de Clientes",
+    "leaveYourComment": "Deixe seu Comentário"
   }
 }

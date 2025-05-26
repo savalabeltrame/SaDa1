@@ -20,5 +20,100 @@
     "about": "About Us",
     "faq": "FAQ",
     "terms": "Terms & Conditions"
+  },
+  "altText": {
+    "currentLanguageFlag": "Current language flag",
+    "englishFlag": "English flag",
+    "spanishFlag": "Spanish flag",
+    "portugueseFlag": "Portuguese flag",
+    "menCategoryNav": "Men's clothing category navigation link",
+    "womenCategoryNav": "Women's clothing category navigation link",
+    "kidsCategoryNav": "Kids' clothing category navigation link",
+    "accessoriesCategoryNav": "Accessories category navigation link",
+    "menCategory": "Link to men's products",
+    "womenCategory": "Link to women's products",
+    "kidsCategory": "Link to kids' products",
+    "accessoriesCategory": "Link to accessories"
+  },
+  "currentLang": "EN",
+  "lang": {
+    "en": "English",
+    "es": "Español",
+    "pt": "Português"
+  },
+  "homepage": {
+    "welcomeTitle": "Welcome to SaDa Store",
+    "welcomeSubtitle": "Your one-stop shop for the latest fashion trends.",
+    "shopNowButton": "Shop Now",
+    "featuredProductsTitle": "Featured Products",
+    "shopByCategoryTitle": "Shop by Category",
+    "newsletterTitle": "Subscribe to our Newsletter",
+    "newsletterSubtitle": "Get the latest updates on new products and upcoming sales.",
+    "newsletterEmailPlaceholder": "Enter your email",
+    "subscribeButton": "Subscribe"
+  },
+  "productsPage": {
+    "title": "Our Products",
+    "filterByCategory": "Filter by Category",
+    "all": "All",
+    "priceRange": "Price Range",
+    "applyFilters": "Apply Filters",
+    "sortBy": "Sort By",
+    "nameAZ": "Name (A-Z)",
+    "nameZA": "Name (Z-A)",
+    "priceLowHigh": "Price (Low-High)",
+    "priceHighLow": "Price (High-Low)",
+    "noProductsFound": "No products found matching your criteria."
+  },
+  "blogPage": {
+    "title": "Our Fashion Blog",
+    "readMore": "Read More"
+  },
+  "singlePostPage": {
+    "authorPrefix": "By",
+    "relatedPosts": "Related Posts",
+    "commentsTitle": "Comments",
+    "leaveComment": "Leave a Comment",
+    "nameLabel": "Name:",
+    "commentLabel": "Your Comment:",
+    "submitComment": "Submit Comment"
+  },
+  "cartPage": {
+    "title": "Your Shopping Cart",
+    "emptyCart": "Your cart is currently empty.",
+    "productColumn": "Product",
+    "priceColumn": "Price",
+    "quantityColumn": "Quantity",
+    "totalColumn": "Total",
+    "removeColumn": "Remove",
+    "subtotal": "Subtotal:",
+    "shipping": "Shipping:",
+    "total": "Total:",
+    "checkoutButton": "Proceed to Checkout"
+  },
+  "checkoutPage": {
+    "title": "Checkout",
+    "shippingAddress": "Shipping Address",
+    "billingAddress": "Billing Address",
+    "sameAsShipping": "Same as shipping address",
+    "paymentInfo": "Payment Information",
+    "orderSummary": "Order Summary",
+    "placeOrderButton": "Place Order",
+    "fullNameLabel": "Full Name",
+    "addressLine1Label": "Address Line 1",
+    "cityLabel": "City",
+    "zipCodeLabel": "ZIP Code",
+    "countryLabel": "Country",
+    "nameOnCardLabel": "Name on Card",
+    "cardNumberLabel": "Card Number"
+  },
+  "productDetailPage": {
+    "sizeLabel": "Size:",
+    "colorLabel": "Color:",
+    "quantityLabel": "Quantity:",
+    "addToCartButton": "Add to Cart",
+    "relatedProductsTitle": "Related Products",
+    "customerReviewsTitle": "Customer Reviews",
+    "leaveYourComment": "Leave Your Comment"
   }
 }

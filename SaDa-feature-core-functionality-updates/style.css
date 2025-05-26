@@ -24,6 +24,7 @@
     outline: none;
     /* text-transform: capitalize; */ /* Removed for natural casing */
     transition: all 0.2s linear;
+    /* overflow-wrap and word-wrap moved to specific selectors below */
 }
 
 html {
@@ -39,6 +40,12 @@ body {
     line-height: 1.6; /* Improved readability */
     font-size: 1.6rem; /* Default font size for body text */
     padding-top: 80px; /* Approximate height of fixed header to prevent content overlap */
+}
+
+/* Text Overflow Prevention - Applied to common text-hosting elements */
+p, h1, h2, h3, h4, h5, h6, span, a, li {
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Legacy fallback */
 }
 
 /* General Link Styles */
@@ -964,7 +971,7 @@ footer ul li a:hover {
     header nav .nav-list li.language-switcher .language-options li a {
         display: flex; 
         align-items: center;
-        justify-content: center; 
+        justify-content: flex-start; /* Align items to the left */
         padding: 1rem 1.5rem; 
         font-size: 1.5rem; 
         /* color: var(--white-color); Inherited from general 'a' in mobile if not overridden */

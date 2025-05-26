@@ -365,7 +365,7 @@ function createProductCardHTML(product) {
         : product.price;
     return `
         <div class="product-card" data-product-id="${product.id}">
-            <img src="${product.imageUrl}" alt="${product.name}">
+            <img src="${product.imageUrl}" alt="${product.name}" loading="lazy">
             <h3>${product.name}</h3>
             <p class="price">
                 ${originalPriceHTML}
